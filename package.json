@@ -110,7 +110,7 @@
     "debug": "^3.2.7",
     "doctrine": "^2.1.0",
     "eslint-import-resolver-node": "^0.3.9",
-    "eslint-module-utils": "^2.8.0",
+    "eslint-module-utils": "nobidev/eslint-module-utils#releases/2.8.0",
     "hasown": "^2.0.0",
     "is-core-module": "^2.13.1",
     "is-glob": "^4.0.3",
