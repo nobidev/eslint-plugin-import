@@ -213,7 +213,8 @@ const erroredContexts = new Set();
  */
 function resolve(p, context) {
   try {
-    return relative(p, context.getPhysicalFilename ? context.getPhysicalFilename() : context.getFilename(), context.settings);
+    const r = relative(p, context.getPhysicalFilename ? context.getPhysicalFilename() : context.getFilename(), context.settings);
+    return r ? r.replace('\0', '') : r;
   } catch (err) {
     if (!erroredContexts.has(context)) {
       // The `err.stack` string starts with `err.name` followed by colon and `err.message`.
